@@ -1,0 +1,92 @@
+<!-- result.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Text Summarization Result</title>
+    <style>
+      /* Add some basic styling to the page */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      
+      /* Style the container */
+      .container {
+        max-width: 600px;
+        margin: 40px;
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      /* Style the header */
+      h1 {
+        color: #333;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      
+      /* Style the summarized text */
+      #summarized-text {
+        font-size: 18px;
+        margin-bottom: 20px;
+        padding: 20px;
+      }
+      
+      /* Style the buttons */
+      .button-container {
+        display: flex;
+        justify-content: space-between;
+      }
+      
+      button {
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      button:hover {
+        background-color: #3e8e41;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Text Summarization Result</h1>
+      <p>Summarized Text:</p>
+      <p id="summarized-text">{{ summarized_text }}</p>
+      <div class="button-container">
+        <button onclick="copyToClipboard()">Copy</button>
+        <button onclick="goBack()">Back</button>
+      </div>
+    </div>
+    <script>
+      function copyToClipboard() {
+        try {
+          const text = document.getElementById("summarized-text").textContent;
+          navigator.clipboard.writeText(text).then(() => {
+            alert("Text copied to clipboard!");
+          }).catch((error) => {
+            console.error("Error copying text to clipboard:", error);
+          });
+        } catch (error) {
+          console.error("Error copying text to clipboard:", error);
+        }
+      }
+      
+      function goBack() {
+        window.history.back();
+      }
+    </script>
+  </body>
+</html>

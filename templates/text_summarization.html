@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Text Summerization</title>
+    <style>
+      /* Add a background color */
+      body {
+        background-color: #92A8D1; /* A light gray background color */
+        font-family: 'Open Sans', sans-serif;
+        color: #333;
+        height: 100vh;
+        margin: 0;
+      }
+      
+      /* Style the container */
+      .container {
+        max-width: 800px; /* Set a maximum width for the container */
+        margin: 60px auto;
+        padding: 30px; /* Add some padding */
+        background-color: #fff; /* White background color */
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      /* Style the header */
+      h1 {
+        font-size: 36px; /* Increase font size */
+        font-weight: bold;
+        margin-bottom: 20px; /* Add some margin */
+        text-align: center; /* Center the header text */
+      }
+      
+      /* Style the form */
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      /* Style the label and textarea */
+      label {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      
+      textarea {
+        width: 100%;
+        height: 200px;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+      }
+      
+      /* Style the button */
+      button[type="submit"] {
+        background-color: #4CAF50; /* Green background color */
+        color: #fff; /* White text color */
+        padding: 10px 20px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+      
+      button[type="submit"]:hover {
+        background-color: #3e8e41; /* Darker green background color on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Text Summerization</h1>
+      <form action="" method="post">
+        <textarea id="text" name="text" placeholder="Enter text here..."></textarea>
+        <button type="submit">Summarize</button>
+      </form>
+    </div>
+  </body>
+</html>

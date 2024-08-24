@@ -1,0 +1,114 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Summerization</title>
+    <style>
+      /* Add a background color */
+      body {
+        background-color: #92A8D1; /* A light gray background color */
+        font-family: 'Open Sans', sans-serif;
+        color: #333;
+        height: 100vh;
+        margin: 0;
+      }
+      
+      /* Style the container */
+      .container {
+        max-width: 1200px; /* Increased container width */
+        margin: 60px auto;
+        padding: 60px; /* Increased padding */
+        background-color: #fff; /* White background color */
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      /* Style the header container */
+      .header-container {
+        background-color: #333; /* Dark gray background color */
+        color: #fff; /* White text color */
+        padding: 30px; /* Increased padding */
+        border-radius: 20px; /* Curved corners */
+        text-align: center; /* Center the header text */
+        margin-bottom: 40px; /* Added margin to increase space between header and buttons */
+      }
+      
+      /* Style the header */
+      h1 {
+        font-size: 48px; /* Increased font size */
+        font-weight: bold;
+        margin-bottom: 10px; /* Reduced margin */
+        white-space: nowrap; /* Prevent line breaks */
+        overflow: hidden; /* Hide excess text */
+      }
+      
+      /* Add marquee effect to header */
+      h1 span {
+        display: inline-block;
+        padding-left: 100%; /* Move text off screen to the right */
+        animation: marquee 5s linear infinite; /* Animate text scrolling */
+      }
+      
+      /* Define marquee animation */
+      @keyframes marquee {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+      
+      /* Style the buttons */
+      button {
+        background-color: #4CAF50; /* Green background color */
+        color: #fff; /* White text color */
+        padding: 30px 60px; /* Increased padding */
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        margin: 10px; /* Reduced margin to make buttons closer */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+        transition: background-color 0.3s ease; /* Add a transition effect */
+      }
+      
+      button:hover {
+        background-color: #3e8e41; /* Darker green background color on hover */
+      }
+      
+      button:active {
+        background-color: #2e6c31; /* Even darker green background color on active */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* Add a deeper shadow on active */
+      }
+      
+      /* Style the button container */
+      .button-container {
+        display: flex; /* Make buttons inline */
+        justify-content: center; /* Center the buttons */
+      }
+      
+      /* Style the paragraph */
+      p {
+        font-size: 18px;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header-container">
+        <h1><span>Welcome to World of Summerization</span></h1>
+      </div>
+      <p>Summarization is the process of condensing large amounts of information into concise and meaningful summaries. It involves identifying the most important information, filtering out unnecessary details, and presenting the key points in a clear and concise manner. Effective summarization can help individuals to quickly grasp the main ideas, save time, and improve their understanding of complex topics. <br>In this world of summarization, we offer two types of summarization services: text summarization and YouTube transcript summarization.<br><br> Choose the one that suits your needs and get started today!</p>
+      <div class="button-container">
+        <button onclick="location.href='/text_summarization'">Text Summerization</button>
+        <button onclick="location.href='/youtube_transcript_summarization'">YouTube Transcript Summerization</button>
+      </div>
+    </div>
+  </body>
+</html>
