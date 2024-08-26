@@ -1,4 +1,4 @@
-https://github.com/heroku-community/rust.git
+
 Flask==2.0.1
 youtube_transcript_api==0.4.4
 transformers==4.12.3
