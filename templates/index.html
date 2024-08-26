@@ -1,0 +1,112 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Summerization</title>
+    <style>
+      
+      body {
+        background-color: #92A8D1; 
+        font-family: 'Open Sans', sans-serif;
+        color: #333;
+        height: 100vh;
+        margin: 0;
+      }
+      
+      
+      .container {
+        max-width: 1200px; 
+        margin: 60px auto;
+        padding: 60px; 
+        background-color: #fff; 
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      
+      .header-container {
+        background-color: #333; 
+        color: #fff; 
+        padding: 30px; 
+        border-radius: 20px; 
+        text-align: center; 
+        margin-bottom: 40px; 
+      }
+      
+      
+      h1 {
+        font-size: 48px; 
+        font-weight: bold;
+        margin-bottom: 10px; 
+        white-space: nowrap; 
+        overflow: hidden; 
+      }
+      
+     
+      h1 span {
+        display: inline-block;
+        padding-left: 100%; 
+        animation: marquee 5s linear infinite; 
+      }
+      
+      @keyframes marquee {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+      
+     
+      button {
+        background-color: #4CAF50; 
+        color: #fff; 
+        padding: 30px 60px; 
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        margin: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+        transition: background-color 0.3s ease; 
+      }
+      
+      button:hover {
+        background-color: #008CBA; 
+      }
+      
+      button:active {
+        background-color: #2e6c31; 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      }
+      
+     
+      .button-container {
+        display: flex; 
+        justify-content: center; 
+      }
+      
+      p {
+        font-size: 18px;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header-container">
+        <h1><span>Welcome to World of Summerization</span></h1>
+      </div>
+      <p>Summarization is the process of condensing large amounts of information into concise and meaningful summaries. It involves identifying the most important information, filtering out unnecessary details, and presenting the key points in a clear and concise manner. Effective summarization can help individuals to quickly grasp the main ideas, save time, and improve their understanding of complex topics. <br>In this world of summarization, we offer two types of summarization services: text summarization and YouTube transcript summarization.<br><br> Choose the one that suits your needs and get started today!</p>
+      <div class="button-container">
+        <button onclick="location.href='/text_summarization'">Text Summerization</button>
+        <button onclick="location.href='/youtube_transcript_summarization'">YouTube Transcript Summerization</button>
+      </div>
+    </div>
+  </body>
+</html>
