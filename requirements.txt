@@ -1,4 +1,5 @@
 Flask==2.0.1
+tokenizers==0.12.1
 youtube_transcript_api==0.4.4
 transformers==4.12.3
 gunicorn==20.0.4
