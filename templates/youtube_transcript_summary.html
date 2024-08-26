@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YouTube Transcript Summary</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #92A8D1;
+      }
+      h1 {
+        color: #333;
+      }
+      
+      .container {
+        max-width: 600px;
+        margin: 40px auto; 
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      button {
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 10px; 
+      }
+      button:hover {
+        background-color: #008CBA;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>YouTube Transcript Summary</h1>
+    <div class="container">
+      <p>Summarized Text:</p>
+      <p>{{ summarized_text }}</p>
+      <button id="copy-btn" onclick="copyToClipboard()">Copy</button>
+      <button id="back-btn" onclick="goBack()">Back</button>
+    </div>
+
+    <script>
+      function copyToClipboard() {
+        const text = document.querySelector(".container p:nth-child(2)").innerText;
+        const textarea = document.createElement("textarea");
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textarea);
+        alert("Copied to clipboard!");
+      }
+
+      function goBack() {
+        window.history.back();
+      }
+    </script>
+  </body>
+</html>
